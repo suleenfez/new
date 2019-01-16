@@ -5,6 +5,12 @@ def HTTP_PORT="8090"
 
 
 node {
+        
+        stage('chekout') {
+    
+                checkout scm
+            
+        }
  
         stage('build') {
     
