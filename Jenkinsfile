@@ -4,18 +4,13 @@ def DOCKER_HUB_USER="scetin1337"
 def HTTP_PORT="8090"
 
 
-pipeline {
-    agent none
+node {
     stages {
         stage('build') {
             steps {
                 echo "Hello World!"
             }
         }
-            stage('Checkout') {
-        checkout scm
-    }
-
     stage("Image Prune"){
         imagePrune(CONTAINER_NAME)
     }
