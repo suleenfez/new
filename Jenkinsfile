@@ -7,9 +7,9 @@ def HTTP_PORT="8090"
 node {
  
         stage('build') {
-            steps {
+    
                 echo "Hello World!"
-            }
+            
         }
     stage("Image Prune"){
         imagePrune(CONTAINER_NAME)
