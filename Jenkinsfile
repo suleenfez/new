@@ -5,7 +5,7 @@ def HTTP_PORT="8090"
 
 
 node {
-    stages {
+ 
         stage('build') {
             steps {
                 echo "Hello World!"
@@ -28,7 +28,7 @@ node {
     stage('Run App'){
         runApp(CONTAINER_NAME, CONTAINER_TAG, DOCKER_HUB_USER, HTTP_PORT)
     }
-    }
+    
 
 }
 
